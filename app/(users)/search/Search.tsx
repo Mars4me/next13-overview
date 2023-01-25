@@ -3,11 +3,11 @@ import { useRouter } from 'next/navigation';
 import React, { FormEvent, useState } from 'react';
 
 const Search = () => {
-    const [search, setSearch] = useState('');
     const router = useRouter();
+    const [search, setSearch] = useState('');
 
     const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault;
+        e.preventDefault();
         setSearch('');
         router.push(`/search/${search}`);
     };
